@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>794259502941-l2uct30mhmpa1udn220ptog2o816an6r.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.794259502941-l2uct30mhmpa1udn220ptog2o816an6r</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCButhuZFohla2OZh5S_56nxMCn5zKft6w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>794259502941</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.webstart.spotifree</string>
+	<key>PROJECT_ID</key>
+	<string>lebonvin-6ab20</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lebonvin-6ab20.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:794259502941:ios:c59cd4d453f5bc87acdab4</string>
+</dict>
+</plist>
