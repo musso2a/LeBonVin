@@ -24,7 +24,7 @@ export default function Search() {
           <TouchableOpacity>
             <View style={styles.wineColor}>
               <Image
-                source={require('../../assets/corse.jpeg')}
+                source={require('../../assets/rouge.jpg')}
                 style={styles.wineColorImg}
               />
             </View>
@@ -32,7 +32,7 @@ export default function Search() {
           <TouchableOpacity>
             <View style={styles.wineColor}>
               <Image
-                source={require('../../assets/corse.jpeg')}
+                source={require('../../assets/rose.jpeg')}
                 style={styles.wineColorImg}
               />
             </View>
@@ -42,7 +42,7 @@ export default function Search() {
           <TouchableOpacity>
             <View style={styles.wineColor}>
               <Image
-                source={require('../../assets/corse.jpeg')}
+                source={require('../../assets/champagne.jpeg')}
                 style={styles.wineColorImg}
               />
             </View>
@@ -50,7 +50,7 @@ export default function Search() {
           <TouchableOpacity>
             <View style={styles.wineColor}>
               <Image
-                source={require('../../assets/corse.jpeg')}
+                source={require('../../assets/blanc.jpg')}
                 style={styles.wineColorImg}
               />
             </View>
@@ -63,7 +63,7 @@ export default function Search() {
         <TouchableOpacity>
           <View style={styles.randomButton}>
             <Image
-              source={require('../../assets/corse.jpeg')}
+              source={require('../../assets/randomWine.jpeg')}
               style={styles.randomWineImg}
             />
           </View>

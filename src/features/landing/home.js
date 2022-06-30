@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   ScrollView,
   Text,
@@ -6,6 +6,7 @@ import {
   Image,
   SafeAreaView,
   TouchableOpacity,
+  FlatList,
 } from 'react-native';
 import styles from './home.style';
 import {Button} from 'react-native-paper';
@@ -14,10 +15,18 @@ import IonIcons from 'react-native-vector-icons/Ionicons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import axios from 'axios';
+
+const baseUrl = 'https://master-wine-api.herokuapp.com/api';
 
 const Stack = createStackNavigator();
 
 export default function Home() {
+  useEffect(() => {
+    axios
+      .get(`${baseUrl}/wines`)
+      .then(response => setWines(response.data.wines));
+  }, []);
   const navigate = useNavigation();
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -79,19 +88,25 @@ export default function Home() {
                     <View style={styles.contentImg}>
                       <Image
                         style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                        source={require('../../assets/vin3.jpeg')}
                       />
                     </View>
                     <View style={styles.contentImg}>
                       <Image
                         style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                        source={require('../../assets/vin3(1).jpeg')}
                       />
                     </View>
                     <View style={styles.contentImg}>
                       <Image
                         style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                        source={require('../../assets/vin3(2).jpeg')}
+                      />
+                    </View>
+                    <View style={styles.contentImg}>
+                      <Image
+                        style={styles.productImg}
+                        source={require('../../assets/vin3(3).jpeg')}
                       />
                     </View>
                   </View>
@@ -128,26 +143,32 @@ export default function Home() {
             <View style={styles.wineCard}>
               <View style={styles.scrollContainer}>
                 <ScrollView
-                  styles={styles.productScroll}
-                  horizontal={true}
-                  showsHorizontalScrollIndicator={false}>
+                    styles={styles.productScroll}
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}>
                   <View style={{paddingRight: 17, flexDirection: 'row'}}>
                     <View style={styles.contentImg}>
                       <Image
-                        style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                          style={styles.productImg}
+                          source={require('../../assets/vin3.jpeg')}
                       />
                     </View>
                     <View style={styles.contentImg}>
                       <Image
-                        style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                          style={styles.productImg}
+                          source={require('../../assets/vin3(1).jpeg')}
                       />
                     </View>
                     <View style={styles.contentImg}>
                       <Image
-                        style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                          style={styles.productImg}
+                          source={require('../../assets/vin3(2).jpeg')}
+                      />
+                    </View>
+                    <View style={styles.contentImg}>
+                      <Image
+                          style={styles.productImg}
+                          source={require('../../assets/vin3(3).jpeg')}
                       />
                     </View>
                   </View>
@@ -161,19 +182,21 @@ export default function Home() {
                   <Text style={styles.priceDescription}> Prix </Text>
                   <View style={styles.echangeIcon}>
                     <MaterialCommunityIcons
-                      style={styles.iconEchange}
-                      name={'compare-horizontal'}
-                      color={'#694BC0'}
-                      size={40}
+                        style={styles.iconEchange}
+                        name={'compare-horizontal'}
+                        color={'#694BC0'}
+                        size={40}
                     />
                   </View>
                 </View>
-                <TouchableOpacity style={styles.iconHolder}>
+                <TouchableOpacity
+                    style={styles.iconHolder}
+                    onPress={() => navigate.navigate('Product')}>
                   <View>
                     <Button
-                      icon="chevron-right"
-                      style={styles.iconTo}
-                      color={'#ffffff'}
+                        icon="chevron-right"
+                        style={styles.iconTo}
+                        color={'#ffffff'}
                     />
                   </View>
                 </TouchableOpacity>
@@ -182,26 +205,32 @@ export default function Home() {
             <View style={styles.wineCard}>
               <View style={styles.scrollContainer}>
                 <ScrollView
-                  styles={styles.productScroll}
-                  horizontal={true}
-                  showsHorizontalScrollIndicator={false}>
+                    styles={styles.productScroll}
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}>
                   <View style={{paddingRight: 17, flexDirection: 'row'}}>
                     <View style={styles.contentImg}>
                       <Image
-                        style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                          style={styles.productImg}
+                          source={require('../../assets/vin3.jpeg')}
                       />
                     </View>
                     <View style={styles.contentImg}>
                       <Image
-                        style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                          style={styles.productImg}
+                          source={require('../../assets/vin3(1).jpeg')}
                       />
                     </View>
                     <View style={styles.contentImg}>
                       <Image
-                        style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                          style={styles.productImg}
+                          source={require('../../assets/vin3(2).jpeg')}
+                      />
+                    </View>
+                    <View style={styles.contentImg}>
+                      <Image
+                          style={styles.productImg}
+                          source={require('../../assets/vin3(3).jpeg')}
                       />
                     </View>
                   </View>
@@ -215,19 +244,21 @@ export default function Home() {
                   <Text style={styles.priceDescription}> Prix </Text>
                   <View style={styles.echangeIcon}>
                     <MaterialCommunityIcons
-                      style={styles.iconEchange}
-                      name={'compare-horizontal'}
-                      color={'#694BC0'}
-                      size={40}
+                        style={styles.iconEchange}
+                        name={'compare-horizontal'}
+                        color={'#694BC0'}
+                        size={40}
                     />
                   </View>
                 </View>
-                <TouchableOpacity style={styles.iconHolder}>
+                <TouchableOpacity
+                    style={styles.iconHolder}
+                    onPress={() => navigate.navigate('Product')}>
                   <View>
                     <Button
-                      icon="chevron-right"
-                      style={styles.iconTo}
-                      color={'#ffffff'}
+                        icon="chevron-right"
+                        style={styles.iconTo}
+                        color={'#ffffff'}
                     />
                   </View>
                 </TouchableOpacity>
@@ -236,26 +267,32 @@ export default function Home() {
             <View style={styles.wineCard}>
               <View style={styles.scrollContainer}>
                 <ScrollView
-                  styles={styles.productScroll}
-                  horizontal={true}
-                  showsHorizontalScrollIndicator={false}>
+                    styles={styles.productScroll}
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}>
                   <View style={{paddingRight: 17, flexDirection: 'row'}}>
                     <View style={styles.contentImg}>
                       <Image
-                        style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                          style={styles.productImg}
+                          source={require('../../assets/vin3.jpeg')}
                       />
                     </View>
                     <View style={styles.contentImg}>
                       <Image
-                        style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                          style={styles.productImg}
+                          source={require('../../assets/vin3(1).jpeg')}
                       />
                     </View>
                     <View style={styles.contentImg}>
                       <Image
-                        style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                          style={styles.productImg}
+                          source={require('../../assets/vin3(2).jpeg')}
+                      />
+                    </View>
+                    <View style={styles.contentImg}>
+                      <Image
+                          style={styles.productImg}
+                          source={require('../../assets/vin3(3).jpeg')}
                       />
                     </View>
                   </View>
@@ -269,19 +306,21 @@ export default function Home() {
                   <Text style={styles.priceDescription}> Prix </Text>
                   <View style={styles.echangeIcon}>
                     <MaterialCommunityIcons
-                      style={styles.iconEchange}
-                      name={'compare-horizontal'}
-                      color={'#694BC0'}
-                      size={40}
+                        style={styles.iconEchange}
+                        name={'compare-horizontal'}
+                        color={'#694BC0'}
+                        size={40}
                     />
                   </View>
                 </View>
-                <TouchableOpacity style={styles.iconHolder}>
+                <TouchableOpacity
+                    style={styles.iconHolder}
+                    onPress={() => navigate.navigate('Product')}>
                   <View>
                     <Button
-                      icon="chevron-right"
-                      style={styles.iconTo}
-                      color={'#ffffff'}
+                        icon="chevron-right"
+                        style={styles.iconTo}
+                        color={'#ffffff'}
                     />
                   </View>
                 </TouchableOpacity>

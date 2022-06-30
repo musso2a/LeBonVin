@@ -5,7 +5,7 @@
 
 // Your web app's Firebase configuration
 export const firebaseConfig = {
-  apiKey: '',
+  apiKey: 'AIzaSyBcaZIecQFlo7UTHNY3_a0A2Bt9P-8FN8o',
   authDomain: 'lebonvin-6ab20.firebaseapp.com',
   databaseURL:
     'https://lebonvin-6ab20-default-rtdb.europe-west1.firebasedatabase.app',

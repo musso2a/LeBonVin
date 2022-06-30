@@ -4,7 +4,7 @@ import firebase from '@react-native-firebase/app';
 import {Switch} from 'react-native-paper';
 import auth from '@react-native-firebase/auth';
 //import * as firebase from 'firebase/app';
-
+import axios from 'axios';
 import {
   StyleSheet,
   Text,
@@ -15,24 +15,9 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+const baseUrl = 'https://master-wine-api.herokuapp.com/api';
+
 export default class SignUp extends React.Component {
-  //state = {email: '', password: '', errorMessage: null};
-
-  // const [checked, setChecked] = React.useState('first');
-  // const [isSwitchOn, setIsSwitchOn] = React.useState(false);
-  // const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
-
-  //handleSignUp = () => {
-  // const {email, password} = this.state;
-  // firebase
-  //   .auth()
-  //   .createUserWithEmailAndPassword(email, password)
-  //   .then(user => this.props.navigation.navigate('Home'))
-  //  .catch(error => this.setState({errorMessage: error.message}));
-  // console.log('handleSignup');
-  // console.log(this.state);
-  //};
-
   constructor() {
     super();
     this.state = {

@@ -63,7 +63,7 @@ export default function User() {
             <View style={styles.profilContainerLeft}>
               <Image
                 style={styles.accountImg}
-                source={require('../../assets/corse.jpeg')}
+                source={require('../../assets/wineman.jpeg')}
               />
             </View>
             <View style={styles.profilContainerRight}>
@@ -88,19 +88,19 @@ export default function User() {
                     <View style={styles.contentImg}>
                       <Image
                         style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                        source={require('../../assets/vin3(1).jpeg')}
                       />
                     </View>
                     <View style={styles.contentImg}>
                       <Image
                         style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                        source={require('../../assets/vin3(2).jpeg')}
                       />
                     </View>
                     <View style={styles.contentImg}>
                       <Image
                         style={styles.productImg}
-                        source={require('../../assets/vignes.jpeg')}
+                        source={require('../../assets/vin3(3).jpeg')}
                       />
                     </View>
                   </View>
